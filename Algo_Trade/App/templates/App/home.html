@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----======== CSS ======== -->
+
+    <link rel="stylesheet" href="{% static 'App/home.css' %}">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Chart js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!--<title>Dashboard Sidebar Menu</title>-->
+    {% block css %}{% endblock css %}
+</head>
+
+<body>
+    <div class="app-container">
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                            <img src="{% static '/App/stockmarket.jpg' %}" alt="">
+                        </span>
+
+                    <div class="text logo-text">
+                        <span class="name">ALGO TRADE USER</span>
+                    </div>
+                </div>
+
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="{%url 'nifty_data'%}">
+                                <i class='bx bx-line-chart icon'></i>
+                                <span class="text nav-text">NIFTY 50 DATA</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="{%url 'banknifty_data'%}">
+                                <i class='bx bx-line-chart icon'></i>
+                                <span class="text nav-text">BANKNIFTY DATA</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="nav-link">
+                            <a href="{%url 'nse_live_data'%}">
+                                <i class='bx bx-data icon'></i>
+                                <span class="text nav-text">NSE LIVE DATA</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+
+        </nav>
+
+        <section class="home">
+            <div class="container big-card">
+                    {% block content %}{% endblock content %} 
+            </div>
+            <div class="container-screens">
+                {% block chart_content %}{% endblock chart_content %}
+
+            </div>
+        </section>
+        <!--SCREEN-LIST SECTION OF CARD STARTS HERE-->
+
+
+
+    </div>
+
+
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle"),
+            searchBtn = body.querySelector(".search-box"),
+            modeSwitch = body.querySelector(".toggle-switch"),
+            modeText = body.querySelector(".mode-text");
+
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+        })
+
+        modeSwitch.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                modeText.innerText = "Light mode";
+            } else {
+                modeText.innerText = "Dark mode";
+
+            }
+        });
+
+
+        const modal = document.querySelector('.modal');
+        const openModal = document.querySelector('.open-button');
+        const closeModal = document.querySelector('.close-button');
+
+        openModal.addEventListener('click', () => {
+            modal.showModal();
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.close();
+        });
+    </script>
+</body>
+
+</html>

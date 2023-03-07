@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-nifty{
+
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        WELCOME TO ALGO TRADING.
+
+        
+        <h3>
+           NIFTY CURRENT VALUE {{nifty_current_value}}
+        </h3>
+            
+        
+        <h3>
+            NIFTY NEAREST STRIKE PRICE {{nf_nearest}}
+        </h3>
+            
+        <h3>
+            BANKNIFTY CURRENT VALUE {{banknifty_current_value}}
+        </h3>
+            
+        <h3>
+            BANKNIFTY NEAREST STRIKE PRICE{{banknifty_current_strike}}
+        </h3>
+            
+        <h3>NIFTY MAJOR SUPPORT : {{nifty_major_support}}</h3>
+        <h3>NIFTY MAJOR RESISTANCE : {{nifty_major_resistance}}</h3>
+        
+        <h3>BANKNIFTY MAJOR SUPPORT : {{banknifty_major_support}}</h3>
+        <h3>BANKNIFTY MAJOR RESISTANCE : {{banknifty_major_resistance}}</h3>
+
+            
+        <button class="btn-nifty">
+            NIFTY 50
+        </button>
+        <button class="btn-banknifty">
+            BANKNIFTY
+        </button>
+    </h1>
+
+
+
+
+
+
+
+
+    <table style = "border:1px;"> 
+        <tr> 
+            {% for data in nse_live_data %} 
+                <th>{{ data }}</th> 
+            {% endfor %} 
+     
+            {% for _, record in nse_live_data.iterrows %} 
+                <tr> 
+                    {% for value in data %} 
+                        <td>{{ value }}</td> 
+                    {% endfor %} 
+                </tr> 
+            {% endfor %} 
+        </tr> 
+    </table> 
+</body>
+</html>

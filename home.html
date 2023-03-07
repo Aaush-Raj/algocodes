@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GO PASSIVE</title>
+    <link rel="stylesheet" href="C:\Users\HP\OneDrive\Desktop\algo_trading\home.css" />
+</head>
+
+<body>
+    <center>
+        <h1>WELCOME TO GOPASSIVE</h1>
+    </center>
+    <div class="container">
+        <div class="box">
+            <div class="form_top">
+                <center>
+                    <h2 id="h2_top">CREATING NEW ALGO TRADE</h2>
+                </center>
+            </div>
+            <form action="" class="algo_form">
+                <div class="main_form">
+                    <div class="form_1">
+                        <label for=""> Underlying: </label>
+
+                        <select name="symbol" class="w-big">
+                                <option value="NIFTY">NIFTY</option>
+                                <option value="BANKNIFTY">BANKNIFTY</option>
+                                <option value="SENSEX">SENSEX</option>
+                                <option value="NIFTY 50">NIFTY 50</option></select><br />
+                        <label for=""> Entry Time:</label>
+                        <input type="text" name="entry_time" /> <br />
+                        <label for=""> Exit Time: </label>
+                        <input type="text" name="exit_time" /><br />
+
+                        <label for="">Entry Type: </label>
+                        <select name="type" class="w-big">
+                                <option value="BUY">BUY</option>
+                                <option value="SELL">SELL</option>
+                                </select>
+                        <br />
+                        <label for="">No Of Lots:  </label>
+                        <input type="text" name="no_of_lots" /><br />
+                        <label for="">Strike Out:    </label>
+                        <input type="text" name="strike_out" /><br />
+
+
+                        <label for="">SL Type:</label>
+                        <select name="sl_type" class="w-big">
+                                <option value="Indiviual">Indiviual SL</option>
+                                <option value="Unknown">Unknown</option>
+                            </select><br />
+                    </div>
+                    <!-- different dlef display -->
+                    <div class="form_2">
+                        <label for="">Target:</label>
+                        <input type="number" name="target" />
+                        <select name="target" class="percent_select">
+                                <option value="%">%</option>
+                                <option value="points">points</option>
+                            </select><br />
+                        <label for="">SL:</label>
+                        <input type="number" name="SL" />
+                        <select name="SL" class="percent_select">
+                                <option value="%">%</option>
+                                <option value="points">points</option>
+                            </select><br />
+                        <label for="">Max profit :</label>
+                        <input type="number" name="max_profit" /> <br>
+
+                        <label for="">Max Loss :</label>
+                        <input type="number" name="max_loss" /> <br>
+
+                        <input type="checkbox" id="move_sl_to_cost" name="move_sl_to_cost" value="move_sl_to_cost" class="checkbox_input">
+                        <label for="move_sl_to_cost" class="checkbox_label"> Move SL to Cost</label><br>
+                        <input type="checkbox" id="square_off" name="square_off" value="square_off" class="checkbox_input">
+                        <label for="square_off" class="checkbox_label"> Square Off @ Exit time?</label><br>
+
+
+                    </div>
+                </div>
+
+                <div class="btns">
+                    <!-- <button>Cancel</button> -->
+
+
+
+                    <center><button class="btn_save">SAVE</button> </center>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+Date: 11/1/2023
+Time: 15:51
+Phone Number: +918340644891
+Message: Hello from Aaush!
+--------------------
+Date: 17/1/2023
+Time: 22:58
+Phone Number: +918340644891
+Message: Hello, this is a scheduled message sent at 12AM.
+--------------------
+Date: 23/1/2023
+Time: 14:11
+Phone Number: +918340644891
+Message: Howdy! This message will be sent instantly!
+--------------------
+Date: 23/1/2023
+Time: 14:12
+Phone Number: +918340644891
+Message: Howdy! This message will be sent instantly!
+--------------------
+Date: 23/1/2023
+Time: 14:12
+Phone Number: +918340644891
+Message: Howdy! This message will be sent instantly!
+--------------------
+Date: 24/1/2023
+Time: 14:48
+Phone Number: +918340644891
+Message: Hello, this is a scheduled message sent at 12AM.
+--------------------
+Date: 24/1/2023
+Time: 14:51
+Phone Number: +918340644891
+Message: HAPPY BIRTHDAY!!🥳🥳
+--------------------
+Date: 24/1/2023
+Time: 14:55
+Phone Number: +918340644891
+Message: HAPPY BIRTHDAY!!🥳🥳
+--------------------
